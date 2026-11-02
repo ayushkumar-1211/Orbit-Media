@@ -20,3 +20,4 @@
    - A     @    -> the value shown on your Vercel domain card (usually 76.76.21.21)
    - CNAME www  -> the value shown on your Vercel domain card (e.g. xxxx.vercel-dns-017.com)
 3. Wait for Vercel to show "Valid Configuration". HTTPS is added automatically.
+Live at orbit-media.in.
