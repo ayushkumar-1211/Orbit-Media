@@ -1,0 +1,685 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Orbit | Shaping Tech Media</title>
+<meta name="description" content="Orbit is the media engine for founders, startups and venture-backed brands. Podcasts, founder brands and launch videos, produced and distributed.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Orbit | Shaping Tech Media">
+<meta property="og:description" content="Orbit is the media engine for founders, startups and venture-backed brands. Podcasts, founder brands and launch videos, produced and distributed.">
+<meta property="og:image" content="/assets/hero-launch.webp">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#FFFFFF">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Geist+Mono:wght@400;500&amp;display=swap">
+<style>
+body{margin:0;background:#FFFFFF}
+html{scroll-behavior:smooth}
+a{color:inherit}a:hover{color:inherit}
+.om-hero-bg{background-image:url(assets/hero-launch.webp);background-size:cover;background-position:70% center;background-repeat:no-repeat}
+@media (max-width: 760px){.om-hero-bg{background-position:78% center}}
+.om-navlink{text-decoration:none;transition:opacity .15s ease}
+.om-navlink:hover{opacity:.6}
+.om-dark{transition:background-color .15s ease}
+.om-dark:hover{background-color:#2A2A2A !important}
+.om-accent{transition:background-color .15s ease,transform .15s ease}
+.om-accent:hover{background-color:#B92B05 !important;transform:translateY(-1px)}
+.om-light{transition:background-color .15s ease}
+.om-light:hover{background-color:#EDEDED !important}
+.om-glass{transition:background-color .15s ease}
+.om-glass:hover{background-color:rgba(255,255,255,0.78) !important}
+.om-tile{transition:background-color .2s ease}
+.om-tile:hover{background-color:#F7F7F7}
+.om-cell{background-color:transparent;transition:background-color .2s ease}
+.om-cases-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+.om-reels-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.om-eng{grid-template-columns:repeat(4,minmax(0,1fr))}
+@media (max-width: 640px){.om-reels-grid{grid-template-columns:minmax(0,1fr);max-width:360px !important}}
+@media (max-width: 900px){.om-cases-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.om-cell:hover{background-color:#FFF6F2}
+.om-ul{text-decoration:underline;text-underline-offset:3px;text-decoration-color:#BDBDBD}
+.om-ul:hover{text-decoration-color:#0A0A0A}
+.om-cta-link:hover{text-decoration:underline;text-underline-offset:3px}
+:focus-visible{outline:2px solid #FF4A1C;outline-offset:3px}
+::selection{background:#FF4A1C;color:#FFFFFF}
+@keyframes om-marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.om-marquee{animation:om-marquee 36s linear infinite}
+@keyframes om-wave{0%,100%{transform:scaleY(.35)}50%{transform:scaleY(1)}}
+.om-wave{animation:om-wave 1.1s ease-in-out infinite}
+@keyframes om-pulse{0%,100%{opacity:1}50%{opacity:.3}}
+.om-pulse{animation:om-pulse 1.6s ease-in-out infinite}
+.om-launch-thumb{background-image:url(assets/hero-launch.webp);background-size:170%;background-position:84% 42%;background-repeat:no-repeat;transition:background-size .7s cubic-bezier(.2,.8,.2,1)}
+.om-tile:hover .om-launch-thumb{background-size:178%}
+.om-thumb-img{transition:transform .7s cubic-bezier(.2,.8,.2,1)}
+.om-tile:hover .om-thumb-img{transform:scale(1.045)}
+@media (max-width: 760px){.om-navlinks{display:none !important}}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}.om-marquee,.om-wave,.om-pulse{animation-play-state:paused}.om-thumb-img,.om-launch-thumb{transition:none}}
+[hidden]{display:none !important}
+.om-snd-on,.om-snd-off{display:flex}
+</style>
+</head>
+<body>
+<div style="background: #FFFFFF; color: #0A0A0A; font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif; font-size: 16px; line-height: 1.5; -webkit-font-smoothing: antialiased">
+
+<div id="om-sticky" hidden>
+<div style="position: fixed; top: 16px; left: 0; right: 0; z-index: 50; display: flex; justify-content: center; padding: 0 16px; pointer-events: none">
+<nav aria-label="Quick" style="pointer-events: auto; width: 100%; max-width: 1000px; box-sizing: border-box; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 7px 7px 7px 24px; background: #FFFFFF; border-radius: 999px; box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05), 0 8px 28px rgba(0, 0, 0, 0.1)">
+<a href="#top" style="display: flex; align-items: center; min-height: 44px; text-decoration: none; font-weight: 700; font-size: 20px; letter-spacing: -0.03em; color: #FF4A1C">Orbit</a>
+<div class="om-navlinks" style="display: flex; align-items: center; gap: 26px; font-size: 16px; font-weight: 500">
+<a href="#case-studies" class="om-navlink" style="display: flex; align-items: center; min-height: 44px">Case Studies</a>
+<a href="#work" class="om-navlink" style="display: flex; align-items: center; min-height: 44px">Work</a>
+<a href="#services" class="om-navlink" style="display: flex; align-items: center; min-height: 44px">Services</a>
+</div>
+<a href="https://calendly.com/ayushsays68/30min" target="_blank" rel="noopener" class="om-accent" style="display: inline-flex; align-items: center; gap: 6px; height: 44px; padding: 0 14px 0 18px; border-radius: 999px; background-color: #DC3509; color: #FFFFFF; font-weight: 600; font-size: 15px; text-decoration: none; white-space: nowrap">Book a call<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></a>
+</nav>
+</div>
+</div>
+
+<section id="top" class="om-hero-bg" style="position: relative; overflow: hidden; background-color: #B9C1CF; color: #0A0A0A">
+<div aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(90deg, rgba(238, 240, 246, 0.55) 0%, rgba(238, 240, 246, 0.28) 38%, rgba(238, 240, 246, 0) 62%), linear-gradient(180deg, rgba(20, 22, 30, 0) 72%, rgba(20, 22, 30, 0.3) 100%)"></div>
+<div style="position: relative; max-width: 1500px; min-height: 860px; margin: 0 auto; box-sizing: border-box; border-left: 1px dashed rgba(10, 15, 25, 0.16); border-right: 1px dashed rgba(10, 15, 25, 0.16); display: flex; flex-direction: column">
+
+<header style="padding: 28px clamp(20px, 3vw, 40px); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px 32px">
+<a href="#top" style="display: flex; flex-direction: column; justify-content: center; min-height: 44px; text-decoration: none">
+<span style="font-weight: 700; font-size: 22px; line-height: 1.2; letter-spacing: -0.03em">Orbit</span>
+<span style="font-family: 'Geist Mono', ui-monospace, monospace; font-size: 13px; color: #3A4150">Shaping tech media</span>
+</a>
+<nav aria-label="Main" class="om-navlinks" style="display: flex; align-items: center; gap: 36px; font-size: 16px; font-weight: 500">
+<a href="#case-studies" class="om-navlink" style="display: flex; align-items: center; min-height: 44px">Case Studies</a>
+<a href="#work" class="om-navlink" style="display: flex; align-items: center; min-height: 44px">Work</a>
+<a href="#services" class="om-navlink" style="display: flex; align-items: center; min-height: 44px">Services</a>
+</nav>
+<div style="display: flex; flex-wrap: wrap; gap: 10px">
+<a href="#work" class="om-glass" style="display: inline-flex; align-items: center; height: 44px; padding: 0 18px; border-radius: 999px; background-color: rgba(255, 255, 255, 0.5); color: #0A0A0A; backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); font-weight: 600; font-size: 15px; text-decoration: none">See our work</a>
+<a href="https://calendly.com/ayushsays68/30min" target="_blank" rel="noopener" class="om-accent" style="display: inline-flex; align-items: center; gap: 6px; height: 44px; padding: 0 14px 0 18px; border-radius: 999px; background-color: #DC3509; color: #FFFFFF; font-weight: 600; font-size: 15px; text-decoration: none">Book a call<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></a>
+</div>
+</header>
+
+<div style="flex: 1; display: flex; flex-direction: column; align-items: flex-start; justify-content: center; text-align: left; gap: 26px; padding: 48px clamp(20px, 3vw, 40px)">
+<h1 style="margin: 0; font-weight: 600; font-size: clamp(40px, 5.2vw, 76px); line-height: 1.06; letter-spacing: -0.04em">We make tech media.<br>And make it go viral.</h1>
+<p style="margin: 0; max-width: 29em; font-size: clamp(17px, 1.45vw, 20px); color: #2E3442; text-wrap: pretty">From scripting and recording to editing and distribution across every platform. Podcasts, founder brands and launch videos. We do it all.</p>
+<a href="https://calendly.com/ayushsays68/30min" target="_blank" rel="noopener" class="om-accent" style="display: inline-flex; align-items: center; gap: 6px; height: 50px; padding: 0 18px 0 24px; margin-top: 8px; border-radius: 999px; background-color: #DC3509; color: #FFFFFF; font-weight: 600; font-size: 16px; text-decoration: none">Book a call<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></a>
+</div>
+
+<div style="padding: 0 0 44px">
+<h2 style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); margin: 0">Our clients</h2>
+<div style="overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent); mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent)">
+<div class="om-marquee" style="display: flex; width: max-content">
+<ul style="list-style: none; margin: 0; padding: 0 48px 0 0; display: flex; align-items: center; gap: 48px">
+<li><img src="assets/logos/the-next-big-thing.webp" alt="The Next Big Thing" width="68" height="68" style="display: block; width: clamp(52px, 4.6vw, 68px); height: clamp(52px, 4.6vw, 68px); border-radius: 16px; object-fit: cover; box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.22), 0 8px 24px rgba(0, 0, 0, 0.35)"></li>
+<li><img src="assets/logos/ace-me.webp" alt="Ace.me" width="68" height="68" style="display: block; width: clamp(52px, 4.6vw, 68px); height: clamp(52px, 4.6vw, 68px); border-radius: 16px; object-fit: cover; box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.22), 0 8px 24px rgba(0, 0, 0, 0.35)"></li>
+<li><img src="assets/logos/client-08.webp" alt="Client" width="68" height="68" style="display: block; width: clamp(52px, 4.6vw, 68px); height: clamp(52px, 4.6vw, 68px); border-radius: 50%; object-fit: cover; box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.22), 0 8px 24px rgba(0, 0, 0, 0.35)"></li>
+<li><img src="assets/logos/client-05.webp" alt="Client logo" width="68" height="68" style="display: block; width: clamp(52px, 4.6vw, 68px); height: clamp(52px, 4.6vw, 68px); border-radius: 16px; object-fit: cover; box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.22), 0 8px 24px rgba(0, 0, 0, 0.35)"></li>
+<li><img src="assets/logos/client-13.webp" alt="Client logo" width="68" height="68" style="display: block; width: clamp(52px, 4.6vw, 68px); height: clamp(52px, 4.6vw, 68px); border-radius: 16px; object-fit: cover; box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.22), 0 8px 24px rgba(0, 0, 0, 0.35)"></li>
+<li><img src="assets/logos/refly.webp" alt="Refly" width="68" height="68" style="display: block; width: clamp(52px, 4.6vw, 68px); height: clamp(52px, 4.6vw, 68px); border-radius: 16px; object-fit: cover; box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.22), 0 8px 24px rgba(0, 0, 0, 0.35)"></li>
+<li><img src="assets/logos/dopa-meme.webp" alt="Dopa Meme" width="68" height="68" style="display: block; width: clamp(52px, 4.6vw, 68px); height: clamp(52px, 4.6vw, 68px); border-radius: 16px; object-fit: cover; box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.22), 0 8px 24px rgba(0, 0, 0, 0.35)"></li>
+<li><img src="assets/logos/client-09.webp" alt="Client" width="68" height="68" style="display: block; width: clamp(52px, 4.6vw, 68px); height: clamp(52px, 4.6vw, 68px); border-radius: 50%; object-fit: cover; box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.22), 0 8px 24px rgba(0, 0, 0, 0.35)"></li>
+<li><img src="assets/logos/client-12.webp" alt="Client logo" width="68" height="68" style="display: block; width: clamp(52px, 4.6vw, 68px); height: clamp(52px, 4.6vw, 68px); border-radius: 16px; object-fit: cover; box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.22), 0 8px 24px rgba(0, 0, 0, 0.35)"></li>
+<li><img src="assets/logos/client-07.webp" alt="Client logo" width="68" height="68" style="display: block; width: clamp(52px, 4.6vw, 68px); height: clamp(52px, 4.6vw, 68px); border-radius: 16px; object-fit: cover; box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.22), 0 8px 24px rgba(0, 0, 0, 0.35)"></li>
+<li><img src="assets/logos/client-10.webp" alt="Client logo" width="68" height="68" style="display: block; width: clamp(52px, 4.6vw, 68px); height: clamp(52px, 4.6vw, 68px); border-radius: 16px; object-fit: cover; box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.22), 0 8px 24px rgba(0, 0, 0, 0.35)"></li>
+<li><img src="assets/logos/mainfold.webp" alt="Mainfold" width="68" height="68" style="display: block; width: clamp(52px, 4.6vw, 68px); height: clamp(52px, 4.6vw, 68px); border-radius: 16px; object-fit: cover; box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.22), 0 8px 24px rgba(0, 0, 0, 0.35)"></li>
+<li><img src="assets/logos/client-11.webp" alt="Client logo" width="68" height="68" style="display: block; width: clamp(52px, 4.6vw, 68px); height: clamp(52px, 4.6vw, 68px); border-radius: 16px; object-fit: cover; box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.22), 0 8px 24px rgba(0, 0, 0, 0.35)"></li>
+</ul>
+<ul aria-hidden="true" style="list-style: none; margin: 0; padding: 0 48px 0 0; display: flex; align-items: center; gap: 48px">
+<li><img src="assets/logos/the-next-big-thing.webp" alt="" width="68" height="68" style="display: block; width: clamp(52px, 4.6vw, 68px); height: clamp(52px, 4.6vw, 68px); border-radius: 16px; object-fit: cover; box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.22), 0 8px 24px rgba(0, 0, 0, 0.35)"></li>
+<li><img src="assets/logos/ace-me.webp" alt="" width="68" height="68" style="display: block; width: clamp(52px, 4.6vw, 68px); height: clamp(52px, 4.6vw, 68px); border-radius: 16px; object-fit: cover; box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.22), 0 8px 24px rgba(0, 0, 0, 0.35)"></li>
+<li><img src="assets/logos/client-08.webp" alt="" width="68" height="68" style="display: block; width: clamp(52px, 4.6vw, 68px); height: clamp(52px, 4.6vw, 68px); border-radius: 50%; object-fit: cover; box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.22), 0 8px 24px rgba(0, 0, 0, 0.35)"></li>
+<li><img src="assets/logos/client-05.webp" alt="" width="68" height="68" style="display: block; width: clamp(52px, 4.6vw, 68px); height: clamp(52px, 4.6vw, 68px); border-radius: 16px; object-fit: cover; box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.22), 0 8px 24px rgba(0, 0, 0, 0.35)"></li>
+<li><img src="assets/logos/client-13.webp" alt="" width="68" height="68" style="display: block; width: clamp(52px, 4.6vw, 68px); height: clamp(52px, 4.6vw, 68px); border-radius: 16px; object-fit: cover; box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.22), 0 8px 24px rgba(0, 0, 0, 0.35)"></li>
+<li><img src="assets/logos/refly.webp" alt="" width="68" height="68" style="display: block; width: clamp(52px, 4.6vw, 68px); height: clamp(52px, 4.6vw, 68px); border-radius: 16px; object-fit: cover; box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.22), 0 8px 24px rgba(0, 0, 0, 0.35)"></li>
+<li><img src="assets/logos/dopa-meme.webp" alt="" width="68" height="68" style="display: block; width: clamp(52px, 4.6vw, 68px); height: clamp(52px, 4.6vw, 68px); border-radius: 16px; object-fit: cover; box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.22), 0 8px 24px rgba(0, 0, 0, 0.35)"></li>
+<li><img src="assets/logos/client-09.webp" alt="" width="68" height="68" style="display: block; width: clamp(52px, 4.6vw, 68px); height: clamp(52px, 4.6vw, 68px); border-radius: 50%; object-fit: cover; box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.22), 0 8px 24px rgba(0, 0, 0, 0.35)"></li>
+<li><img src="assets/logos/client-12.webp" alt="" width="68" height="68" style="display: block; width: clamp(52px, 4.6vw, 68px); height: clamp(52px, 4.6vw, 68px); border-radius: 16px; object-fit: cover; box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.22), 0 8px 24px rgba(0, 0, 0, 0.35)"></li>
+<li><img src="assets/logos/client-07.webp" alt="" width="68" height="68" style="display: block; width: clamp(52px, 4.6vw, 68px); height: clamp(52px, 4.6vw, 68px); border-radius: 16px; object-fit: cover; box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.22), 0 8px 24px rgba(0, 0, 0, 0.35)"></li>
+<li><img src="assets/logos/client-10.webp" alt="" width="68" height="68" style="display: block; width: clamp(52px, 4.6vw, 68px); height: clamp(52px, 4.6vw, 68px); border-radius: 16px; object-fit: cover; box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.22), 0 8px 24px rgba(0, 0, 0, 0.35)"></li>
+<li><img src="assets/logos/mainfold.webp" alt="" width="68" height="68" style="display: block; width: clamp(52px, 4.6vw, 68px); height: clamp(52px, 4.6vw, 68px); border-radius: 16px; object-fit: cover; box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.22), 0 8px 24px rgba(0, 0, 0, 0.35)"></li>
+<li><img src="assets/logos/client-11.webp" alt="" width="68" height="68" style="display: block; width: clamp(52px, 4.6vw, 68px); height: clamp(52px, 4.6vw, 68px); border-radius: 16px; object-fit: cover; box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.22), 0 8px 24px rgba(0, 0, 0, 0.35)"></li>
+</ul>
+</div>
+</div>
+</div>
+
+</div>
+</section>
+
+<div style="max-width: 1500px; margin: 0 auto; border-left: 1px dashed #E6E6E6; border-right: 1px dashed #E6E6E6; box-sizing: border-box">
+
+<section aria-label="Results" style="padding: clamp(88px, 10vw, 140px) clamp(20px, 4vw, 40px); display: flex; flex-direction: column; align-items: center; text-align: center; gap: 22px">
+<h2 style="margin: 0; max-width: 13em; font-weight: 500; font-size: clamp(40px, 5.4vw, 80px); line-height: 1.04; letter-spacing: -0.055em; text-wrap: balance"><span style="color: #FF4A1C">100M+</span> views generated for 120+ clients</h2>
+<p style="margin: 0; max-width: 33em; font-size: clamp(17px, 1.4vw, 19px); line-height: 1.5; color: #0A0A0A; text-wrap: balance">We work with founders, startups and venture-backed brands <span style="color: #7A7A7A">to produce and distribute the media that gets them seen.</span></p>
+<span style="display: inline-flex; align-items: center; gap: 8px; padding-top: 6px; font-family: 'Geist Mono', ui-monospace, monospace; font-size: 13px; color: #6B6B6B"><span style="width: 7px; height: 7px; border-radius: 50%; background: #FF4A1C"></span>1000+ videos created</span>
+<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; padding-top: 10px"><a href="https://calendly.com/ayushsays68/30min" target="_blank" rel="noopener" class="om-accent" style="display: inline-flex; align-items: center; gap: 6px; height: 48px; padding: 0 18px 0 22px; border-radius: 999px; background-color: #DC3509; color: #FFFFFF; font-weight: 600; font-size: 16px; text-decoration: none; white-space: nowrap">Book a call<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></a><a href="#case-studies" class="om-light" style="display: inline-flex; align-items: center; height: 48px; padding: 0 22px; box-sizing: border-box; border-radius: 999px; background-color: #FFFFFF; box-shadow: 0 0 0 1px #E3E3E3; font-weight: 600; font-size: 16px; text-decoration: none">See case studies</a></div>
+</section>
+
+<section id="case-studies" style="scroll-margin-top: 96px; border-top: 1px dashed #E6E6E6">
+<div style="padding: clamp(48px, 5vw, 64px) clamp(20px, 4vw, 40px) 32px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 10px">
+<h2 style="margin: 0; font-weight: 600; font-size: clamp(30px, 3.2vw, 42px); line-height: 1.08; letter-spacing: -0.04em">Case studies</h2>
+<p style="margin: 0; max-width: 30em; color: #6B6B6B; font-size: 16px">Pick a case study to read what working with Orbit did for them.</p>
+</div>
+<div style="border-top: 1px dashed #E6E6E6; overflow: hidden">
+<div role="tablist" aria-label="Case studies" class="om-cases-grid" style="display: grid; margin: -1px 0 0 -1px">
+
+<div style="border-left: 1px dashed #E6E6E6; border-top: 1px dashed #E6E6E6; padding: 10px">
+
+<button data-case="ace" data-variant="active" type="button" role="tab" aria-selected="true" onClick="" style="width: 100%; height: 100%; min-height: 212px; box-sizing: border-box; border: 0; border-radius: 14px; padding: 22px 14px 16px; display: flex; flex-direction: column; align-items: center; justify-content: space-between; gap: 12px; font-family: inherit; color: #0A0A0A; text-align: center; background-color: #FFF1EB; box-shadow: inset 0 0 0 1px rgba(255, 74, 28, 0.35); cursor: pointer">
+<span style="display: flex; flex-direction: column; align-items: center; gap: 12px"><img src="assets/logos/ace-me.webp" alt="" width="56" height="56" style="flex: none; width: 56px; height: 56px; border-radius: 14px; box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.06); object-fit: cover"><span style="display: flex; flex-direction: column; align-items: center; gap: 4px"><span style="font-weight: 600; font-size: 19px; line-height: 1.2; letter-spacing: -0.03em">Ace.me</span><span style="font-size: 14px; color: #4A4A4A">2,000 paid users</span></span></span>
+<span style="display: inline-flex; align-items: center; gap: 6px; height: 16px; font-size: 13px; font-weight: 600; color: #DC3509"><span style="width: 6px; height: 6px; border-radius: 50%; background: #FF4A1C"></span>Case Study</span>
+</button>
+
+
+<button data-case="ace" data-variant="idle" hidden type="button" role="tab" aria-selected="false" class="om-cell" onClick="" style="width: 100%; height: 100%; min-height: 212px; box-sizing: border-box; border: 0; border-radius: 14px; padding: 22px 14px 16px; display: flex; flex-direction: column; align-items: center; justify-content: space-between; gap: 12px; font-family: inherit; color: #0A0A0A; text-align: center; cursor: pointer">
+<span style="display: flex; flex-direction: column; align-items: center; gap: 12px"><img src="assets/logos/ace-me.webp" alt="" width="56" height="56" style="flex: none; width: 56px; height: 56px; border-radius: 14px; box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.06); object-fit: cover"><span style="display: flex; flex-direction: column; align-items: center; gap: 4px"><span style="font-weight: 600; font-size: 19px; line-height: 1.2; letter-spacing: -0.03em">Ace.me</span><span style="font-size: 14px; color: #6B6B6B">2,000 paid users</span></span></span>
+<span style="height: 16px; font-size: 13px; font-weight: 500; color: #6B6B6B">Case Study</span>
+</button>
+
+</div>
+
+
+<div style="border-left: 1px dashed #E6E6E6; border-top: 1px dashed #E6E6E6; padding: 10px">
+
+<button data-case="tnbt" data-variant="active" hidden type="button" role="tab" aria-selected="true" onClick="" style="width: 100%; height: 100%; min-height: 212px; box-sizing: border-box; border: 0; border-radius: 14px; padding: 22px 14px 16px; display: flex; flex-direction: column; align-items: center; justify-content: space-between; gap: 12px; font-family: inherit; color: #0A0A0A; text-align: center; background-color: #FFF1EB; box-shadow: inset 0 0 0 1px rgba(255, 74, 28, 0.35); cursor: pointer">
+<span style="display: flex; flex-direction: column; align-items: center; gap: 12px"><img src="assets/logos/the-next-big-thing.webp" alt="" width="56" height="56" style="flex: none; width: 56px; height: 56px; border-radius: 14px; box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.06); object-fit: cover"><span style="display: flex; flex-direction: column; align-items: center; gap: 4px"><span style="font-weight: 600; font-size: 19px; line-height: 1.2; letter-spacing: -0.03em">The Next Big Thing</span><span style="font-size: 14px; color: #4A4A4A">600K+ impressions</span></span></span>
+<span style="display: inline-flex; align-items: center; gap: 6px; height: 16px; font-size: 13px; font-weight: 600; color: #DC3509"><span style="width: 6px; height: 6px; border-radius: 50%; background: #FF4A1C"></span>Case Study</span>
+</button>
+
+
+<button data-case="tnbt" data-variant="idle" type="button" role="tab" aria-selected="false" class="om-cell" onClick="" style="width: 100%; height: 100%; min-height: 212px; box-sizing: border-box; border: 0; border-radius: 14px; padding: 22px 14px 16px; display: flex; flex-direction: column; align-items: center; justify-content: space-between; gap: 12px; font-family: inherit; color: #0A0A0A; text-align: center; cursor: pointer">
+<span style="display: flex; flex-direction: column; align-items: center; gap: 12px"><img src="assets/logos/the-next-big-thing.webp" alt="" width="56" height="56" style="flex: none; width: 56px; height: 56px; border-radius: 14px; box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.06); object-fit: cover"><span style="display: flex; flex-direction: column; align-items: center; gap: 4px"><span style="font-weight: 600; font-size: 19px; line-height: 1.2; letter-spacing: -0.03em">The Next Big Thing</span><span style="font-size: 14px; color: #6B6B6B">600K+ impressions</span></span></span>
+<span style="height: 16px; font-size: 13px; font-weight: 500; color: #6B6B6B">Case Study</span>
+</button>
+
+</div>
+
+
+<div style="border-left: 1px dashed #E6E6E6; border-top: 1px dashed #E6E6E6; padding: 10px">
+
+<button data-case="highdrop" data-variant="active" hidden type="button" role="tab" aria-selected="true" onClick="" style="width: 100%; height: 100%; min-height: 212px; box-sizing: border-box; border: 0; border-radius: 14px; padding: 22px 14px 16px; display: flex; flex-direction: column; align-items: center; justify-content: space-between; gap: 12px; font-family: inherit; color: #0A0A0A; text-align: center; background-color: #FFF1EB; box-shadow: inset 0 0 0 1px rgba(255, 74, 28, 0.35); cursor: pointer">
+<span style="display: flex; flex-direction: column; align-items: center; gap: 12px"><span aria-hidden="true" style="flex: none; width: 56px; height: 56px; border-radius: 14px; box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.06); background: #F3F3F3; display: flex; align-items: center; justify-content: center; font-weight: 600; font-size: 18px; letter-spacing: -0.02em; color: #4A4A4A">H</span><span style="display: flex; flex-direction: column; align-items: center; gap: 4px"><span style="font-weight: 600; font-size: 19px; line-height: 1.2; letter-spacing: -0.03em">Highdrop.co</span><span style="font-size: 14px; color: #4A4A4A">3 months beat 2 years</span></span></span>
+<span style="display: inline-flex; align-items: center; gap: 6px; height: 16px; font-size: 13px; font-weight: 600; color: #DC3509"><span style="width: 6px; height: 6px; border-radius: 50%; background: #FF4A1C"></span>Case Study</span>
+</button>
+
+
+<button data-case="highdrop" data-variant="idle" type="button" role="tab" aria-selected="false" class="om-cell" onClick="" style="width: 100%; height: 100%; min-height: 212px; box-sizing: border-box; border: 0; border-radius: 14px; padding: 22px 14px 16px; display: flex; flex-direction: column; align-items: center; justify-content: space-between; gap: 12px; font-family: inherit; color: #0A0A0A; text-align: center; cursor: pointer">
+<span style="display: flex; flex-direction: column; align-items: center; gap: 12px"><span aria-hidden="true" style="flex: none; width: 56px; height: 56px; border-radius: 14px; box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.06); background: #F3F3F3; display: flex; align-items: center; justify-content: center; font-weight: 600; font-size: 18px; letter-spacing: -0.02em; color: #4A4A4A">H</span><span style="display: flex; flex-direction: column; align-items: center; gap: 4px"><span style="font-weight: 600; font-size: 19px; line-height: 1.2; letter-spacing: -0.03em">Highdrop.co</span><span style="font-size: 14px; color: #6B6B6B">3 months beat 2 years</span></span></span>
+<span style="height: 16px; font-size: 13px; font-weight: 500; color: #6B6B6B">Case Study</span>
+</button>
+
+</div>
+
+
+<div style="border-left: 1px dashed #E6E6E6; border-top: 1px dashed #E6E6E6; padding: 10px">
+
+<button data-case="xandhq" data-variant="active" hidden type="button" role="tab" aria-selected="true" onClick="" style="width: 100%; height: 100%; min-height: 212px; box-sizing: border-box; border: 0; border-radius: 14px; padding: 22px 14px 16px; display: flex; flex-direction: column; align-items: center; justify-content: space-between; gap: 12px; font-family: inherit; color: #0A0A0A; text-align: center; background-color: #FFF1EB; box-shadow: inset 0 0 0 1px rgba(255, 74, 28, 0.35); cursor: pointer">
+<span style="display: flex; flex-direction: column; align-items: center; gap: 12px"><span aria-hidden="true" style="flex: none; width: 56px; height: 56px; border-radius: 14px; box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.06); background: #F3F3F3; display: flex; align-items: center; justify-content: center; font-weight: 600; font-size: 18px; letter-spacing: -0.02em; color: #4A4A4A">X</span><span style="display: flex; flex-direction: column; align-items: center; gap: 4px"><span style="font-weight: 600; font-size: 19px; line-height: 1.2; letter-spacing: -0.03em">XandHQ</span><span style="font-size: 14px; color: #4A4A4A">More deal flow in Q1</span></span></span>
+<span style="display: inline-flex; align-items: center; gap: 6px; height: 16px; font-size: 13px; font-weight: 600; color: #DC3509"><span style="width: 6px; height: 6px; border-radius: 50%; background: #FF4A1C"></span>Case Study</span>
+</button>
+
+
+<button data-case="xandhq" data-variant="idle" type="button" role="tab" aria-selected="false" class="om-cell" onClick="" style="width: 100%; height: 100%; min-height: 212px; box-sizing: border-box; border: 0; border-radius: 14px; padding: 22px 14px 16px; display: flex; flex-direction: column; align-items: center; justify-content: space-between; gap: 12px; font-family: inherit; color: #0A0A0A; text-align: center; cursor: pointer">
+<span style="display: flex; flex-direction: column; align-items: center; gap: 12px"><span aria-hidden="true" style="flex: none; width: 56px; height: 56px; border-radius: 14px; box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.06); background: #F3F3F3; display: flex; align-items: center; justify-content: center; font-weight: 600; font-size: 18px; letter-spacing: -0.02em; color: #4A4A4A">X</span><span style="display: flex; flex-direction: column; align-items: center; gap: 4px"><span style="font-weight: 600; font-size: 19px; line-height: 1.2; letter-spacing: -0.03em">XandHQ</span><span style="font-size: 14px; color: #6B6B6B">More deal flow in Q1</span></span></span>
+<span style="height: 16px; font-size: 13px; font-weight: 500; color: #6B6B6B">Case Study</span>
+</button>
+
+</div>
+
+
+<div style="border-left: 1px dashed #E6E6E6; border-top: 1px dashed #E6E6E6; padding: 10px">
+
+<button data-case="elevator" data-variant="active" hidden type="button" role="tab" aria-selected="true" onClick="" style="width: 100%; height: 100%; min-height: 212px; box-sizing: border-box; border: 0; border-radius: 14px; padding: 22px 14px 16px; display: flex; flex-direction: column; align-items: center; justify-content: space-between; gap: 12px; font-family: inherit; color: #0A0A0A; text-align: center; background-color: #FFF1EB; box-shadow: inset 0 0 0 1px rgba(255, 74, 28, 0.35); cursor: pointer">
+<span style="display: flex; flex-direction: column; align-items: center; gap: 12px"><span aria-hidden="true" style="flex: none; width: 56px; height: 56px; border-radius: 14px; box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.06); background: #F3F3F3; display: flex; align-items: center; justify-content: center; font-weight: 600; font-size: 18px; letter-spacing: -0.02em; color: #4A4A4A">EG</span><span style="display: flex; flex-direction: column; align-items: center; gap: 4px"><span style="font-weight: 600; font-size: 19px; line-height: 1.2; letter-spacing: -0.03em">Elevator Goods</span><span style="font-size: 14px; color: #4A4A4A">10+ hours back a week</span></span></span>
+<span style="display: inline-flex; align-items: center; gap: 6px; height: 16px; font-size: 13px; font-weight: 600; color: #DC3509"><span style="width: 6px; height: 6px; border-radius: 50%; background: #FF4A1C"></span>Case Study</span>
+</button>
+
+
+<button data-case="elevator" data-variant="idle" type="button" role="tab" aria-selected="false" class="om-cell" onClick="" style="width: 100%; height: 100%; min-height: 212px; box-sizing: border-box; border: 0; border-radius: 14px; padding: 22px 14px 16px; display: flex; flex-direction: column; align-items: center; justify-content: space-between; gap: 12px; font-family: inherit; color: #0A0A0A; text-align: center; cursor: pointer">
+<span style="display: flex; flex-direction: column; align-items: center; gap: 12px"><span aria-hidden="true" style="flex: none; width: 56px; height: 56px; border-radius: 14px; box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.06); background: #F3F3F3; display: flex; align-items: center; justify-content: center; font-weight: 600; font-size: 18px; letter-spacing: -0.02em; color: #4A4A4A">EG</span><span style="display: flex; flex-direction: column; align-items: center; gap: 4px"><span style="font-weight: 600; font-size: 19px; line-height: 1.2; letter-spacing: -0.03em">Elevator Goods</span><span style="font-size: 14px; color: #6B6B6B">10+ hours back a week</span></span></span>
+<span style="height: 16px; font-size: 13px; font-weight: 500; color: #6B6B6B">Case Study</span>
+</button>
+
+</div>
+
+
+<div style="border-left: 1px dashed #E6E6E6; border-top: 1px dashed #E6E6E6; padding: 10px">
+
+<button data-case="refly" data-variant="active" hidden type="button" role="tab" aria-selected="true" onClick="" style="width: 100%; height: 100%; min-height: 212px; box-sizing: border-box; border: 0; border-radius: 14px; padding: 22px 14px 16px; display: flex; flex-direction: column; align-items: center; justify-content: space-between; gap: 12px; font-family: inherit; color: #0A0A0A; text-align: center; background-color: #FFF1EB; box-shadow: inset 0 0 0 1px rgba(255, 74, 28, 0.35); cursor: pointer">
+<span style="display: flex; flex-direction: column; align-items: center; gap: 12px"><img src="assets/logos/refly.webp" alt="" width="56" height="56" style="flex: none; width: 56px; height: 56px; border-radius: 14px; box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.06); object-fit: cover"><span style="display: flex; flex-direction: column; align-items: center; gap: 4px"><span style="font-weight: 600; font-size: 19px; line-height: 1.2; letter-spacing: -0.03em">Refly</span><span style="font-size: 14px; color: #4A4A4A">Higher ROAS with AI video</span></span></span>
+<span style="display: inline-flex; align-items: center; gap: 6px; height: 16px; font-size: 13px; font-weight: 600; color: #DC3509"><span style="width: 6px; height: 6px; border-radius: 50%; background: #FF4A1C"></span>Case Study</span>
+</button>
+
+
+<button data-case="refly" data-variant="idle" type="button" role="tab" aria-selected="false" class="om-cell" onClick="" style="width: 100%; height: 100%; min-height: 212px; box-sizing: border-box; border: 0; border-radius: 14px; padding: 22px 14px 16px; display: flex; flex-direction: column; align-items: center; justify-content: space-between; gap: 12px; font-family: inherit; color: #0A0A0A; text-align: center; cursor: pointer">
+<span style="display: flex; flex-direction: column; align-items: center; gap: 12px"><img src="assets/logos/refly.webp" alt="" width="56" height="56" style="flex: none; width: 56px; height: 56px; border-radius: 14px; box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.06); object-fit: cover"><span style="display: flex; flex-direction: column; align-items: center; gap: 4px"><span style="font-weight: 600; font-size: 19px; line-height: 1.2; letter-spacing: -0.03em">Refly</span><span style="font-size: 14px; color: #6B6B6B">Higher ROAS with AI video</span></span></span>
+<span style="height: 16px; font-size: 13px; font-weight: 500; color: #6B6B6B">Case Study</span>
+</button>
+
+</div>
+
+
+<div style="border-left: 1px dashed #E6E6E6; border-top: 1px dashed #E6E6E6; padding: 10px">
+
+<button data-case="mainfold" data-variant="active" hidden type="button" role="tab" aria-selected="true" onClick="" style="width: 100%; height: 100%; min-height: 212px; box-sizing: border-box; border: 0; border-radius: 14px; padding: 22px 14px 16px; display: flex; flex-direction: column; align-items: center; justify-content: space-between; gap: 12px; font-family: inherit; color: #0A0A0A; text-align: center; background-color: #FFF1EB; box-shadow: inset 0 0 0 1px rgba(255, 74, 28, 0.35); cursor: pointer">
+<span style="display: flex; flex-direction: column; align-items: center; gap: 12px"><img src="assets/logos/mainfold.webp" alt="" width="56" height="56" style="flex: none; width: 56px; height: 56px; border-radius: 14px; box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.06); object-fit: cover"><span style="display: flex; flex-direction: column; align-items: center; gap: 4px"><span style="font-weight: 600; font-size: 19px; line-height: 1.2; letter-spacing: -0.03em">Mainfold</span><span style="font-size: 14px; color: #4A4A4A">Distribution that won clients</span></span></span>
+<span style="display: inline-flex; align-items: center; gap: 6px; height: 16px; font-size: 13px; font-weight: 600; color: #DC3509"><span style="width: 6px; height: 6px; border-radius: 50%; background: #FF4A1C"></span>Case Study</span>
+</button>
+
+
+<button data-case="mainfold" data-variant="idle" type="button" role="tab" aria-selected="false" class="om-cell" onClick="" style="width: 100%; height: 100%; min-height: 212px; box-sizing: border-box; border: 0; border-radius: 14px; padding: 22px 14px 16px; display: flex; flex-direction: column; align-items: center; justify-content: space-between; gap: 12px; font-family: inherit; color: #0A0A0A; text-align: center; cursor: pointer">
+<span style="display: flex; flex-direction: column; align-items: center; gap: 12px"><img src="assets/logos/mainfold.webp" alt="" width="56" height="56" style="flex: none; width: 56px; height: 56px; border-radius: 14px; box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.06); object-fit: cover"><span style="display: flex; flex-direction: column; align-items: center; gap: 4px"><span style="font-weight: 600; font-size: 19px; line-height: 1.2; letter-spacing: -0.03em">Mainfold</span><span style="font-size: 14px; color: #6B6B6B">Distribution that won clients</span></span></span>
+<span style="height: 16px; font-size: 13px; font-weight: 500; color: #6B6B6B">Case Study</span>
+</button>
+
+</div>
+
+<div style="border-left: 1px dashed #E6E6E6; border-top: 1px dashed #E6E6E6; padding: 10px">
+<a href="https://calendly.com/ayushsays68/30min" target="_blank" rel="noopener" class="om-cell" style="width: 100%; height: 100%; min-height: 212px; box-sizing: border-box; border: 0; border-radius: 14px; padding: 22px 14px 16px; display: flex; flex-direction: column; align-items: center; justify-content: space-between; gap: 12px; font-family: inherit; color: #0A0A0A; text-align: center; text-decoration: none">
+<span style="display: flex; flex-direction: column; align-items: center; gap: 12px"><span aria-hidden="true" style="flex: none; width: 56px; height: 56px; border-radius: 14px; box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.06); box-shadow: none; border: 1.5px dashed #FF4A1C; box-sizing: border-box; display: flex; align-items: center; justify-content: center; color: #FF4A1C; font-size: 26px; font-weight: 400">+</span><span style="font-weight: 600; font-size: 19px; line-height: 1.2; letter-spacing: -0.03em; color: #9A9A9A">Your brand</span></span>
+<span style="display: inline-flex; align-items: center; gap: 4px; height: 16px; font-size: 13px; font-weight: 600; color: #DC3509">Book a call<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></span>
+</a>
+</div>
+</div>
+</div>
+<div role="tabpanel" data-panel="ace" aria-label="Ace.me case study" style="border-top: 1px dashed #E6E6E6; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr)); gap: 24px 64px; align-items: start; padding: clamp(32px, 3.5vw, 44px) clamp(20px, 4vw, 48px)">
+<div style="display: flex; flex-direction: column; gap: 20px">
+<span style="font-weight: 600; font-size: clamp(30px, 3vw, 42px); line-height: 1.05; letter-spacing: -0.04em; color: #FF4A1C">2,000 paid users</span>
+
+<div style="display: flex; align-items: center; gap: 12px">
+<span aria-hidden="true" style="flex: none; width: 40px; height: 40px; border-radius: 50%; background: #E7E7E7; display: flex; align-items: center; justify-content: center; font-weight: 600; font-size: 14px; color: #3A3A3A">V</span>
+<div style="display: flex; flex-direction: column; line-height: 1.35">
+
+<span style="font-weight: 600; font-size: 16px">Viktor</span>
+<a href="https://ace.me" target="_blank" rel="noopener" class="om-ul" style="font-size: 14px; color: #4A4A4A">Ace.me</a>
+</div>
+</div>
+
+
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; padding-top: 4px"><span style="color: #6B6B6B; font-size: 15px">Want results like this?</span><a href="https://calendly.com/ayushsays68/30min" target="_blank" rel="noopener" class="om-accent" style="display: inline-flex; align-items: center; gap: 6px; height: 44px; padding: 0 18px 0 22px; border-radius: 999px; background-color: #DC3509; color: #FFFFFF; font-weight: 600; font-size: 15px; text-decoration: none; white-space: nowrap">Book a call<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></a></div>
+</div>
+<p style="margin: 0; max-width: 40em; color: #2B2B2B; font-size: clamp(17px, 1.35vw, 19px); line-height: 1.6; text-wrap: pretty">“2,000 paid users. That’s what Orbit did for my page. The team is fast, the scripts actually hook people, and they treat your content like it’s their own business. Easily the best agency decision I’ve made.”</p>
+
+</div>
+<div role="tabpanel" data-panel="tnbt" hidden aria-label="The Next Big Thing case study" style="border-top: 1px dashed #E6E6E6; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr)); gap: 24px 64px; align-items: start; padding: clamp(32px, 3.5vw, 44px) clamp(20px, 4vw, 48px)">
+<div style="display: flex; flex-direction: column; gap: 20px">
+<span style="font-weight: 600; font-size: clamp(30px, 3vw, 42px); line-height: 1.05; letter-spacing: -0.04em; color: #FF4A1C">600K+ impressions</span>
+
+<div style="display: flex; align-items: center; gap: 12px">
+<span aria-hidden="true" style="flex: none; width: 40px; height: 40px; border-radius: 50%; background: #E7E7E7; display: flex; align-items: center; justify-content: center; font-weight: 600; font-size: 14px; color: #3A3A3A">AB</span>
+<div style="display: flex; flex-direction: column; line-height: 1.35">
+<a href="https://www.instagram.com/ayaxbader/" target="_blank" rel="noopener" class="om-navlink" style="font-weight: 600; font-size: 16px">Ayax Bader</a>
+
+<a href="https://www.instagram.com/thenextbigthing_media/" target="_blank" rel="noopener" class="om-ul" style="font-size: 14px; color: #4A4A4A">The Next Big Thing</a>
+</div>
+</div>
+
+
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; padding-top: 4px"><span style="color: #6B6B6B; font-size: 15px">Want results like this?</span><a href="https://calendly.com/ayushsays68/30min" target="_blank" rel="noopener" class="om-accent" style="display: inline-flex; align-items: center; gap: 6px; height: 44px; padding: 0 18px 0 22px; border-radius: 999px; background-color: #DC3509; color: #FFFFFF; font-weight: 600; font-size: 15px; text-decoration: none; white-space: nowrap">Book a call<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></a></div>
+</div>
+<p style="margin: 0; max-width: 40em; color: #2B2B2B; font-size: clamp(17px, 1.35vw, 19px); line-height: 1.6; text-wrap: pretty">“I’d been burned by two agencies before, so I was skeptical. Orbit’s team asked better questions in the first call than the others did in months of working together. Turnaround is quick, revisions are painless, and the content actually performs: 600K+ impressions in our first stretch working together.”</p>
+
+</div>
+<div role="tabpanel" data-panel="highdrop" hidden aria-label="Highdrop.co case study" style="border-top: 1px dashed #E6E6E6; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr)); gap: 24px 64px; align-items: start; padding: clamp(32px, 3.5vw, 44px) clamp(20px, 4vw, 48px)">
+<div style="display: flex; flex-direction: column; gap: 20px">
+<span style="font-weight: 600; font-size: clamp(30px, 3vw, 42px); line-height: 1.05; letter-spacing: -0.04em; color: #FF4A1C">3 months beat 2 years</span>
+
+<div style="display: flex; align-items: center; gap: 12px">
+<span aria-hidden="true" style="flex: none; width: 40px; height: 40px; border-radius: 50%; background: #E7E7E7; display: flex; align-items: center; justify-content: center; font-weight: 600; font-size: 14px; color: #3A3A3A">TW</span>
+<div style="display: flex; flex-direction: column; line-height: 1.35">
+
+<span style="font-weight: 600; font-size: 16px">Tim Whitt</span>
+<a href="https://highdrop.co" target="_blank" rel="noopener" class="om-ul" style="font-size: 14px; color: #4A4A4A">Highdrop.co</a>
+</div>
+</div>
+
+
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; padding-top: 4px"><span style="color: #6B6B6B; font-size: 15px">Want results like this?</span><a href="https://calendly.com/ayushsays68/30min" target="_blank" rel="noopener" class="om-accent" style="display: inline-flex; align-items: center; gap: 6px; height: 44px; padding: 0 18px 0 22px; border-radius: 999px; background-color: #DC3509; color: #FFFFFF; font-weight: 600; font-size: 15px; text-decoration: none; white-space: nowrap">Book a call<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></a></div>
+</div>
+<p style="margin: 0; max-width: 40em; color: #2B2B2B; font-size: clamp(17px, 1.35vw, 19px); line-height: 1.6; text-wrap: pretty">“Worked with Orbit for 6 months and the difference is night and day. Went from posting randomly to a proper content system. My LinkedIn and Instagram grew faster in 3 months than in the previous 2 years. They don’t just edit videos, they think about distribution like a growth team.”</p>
+
+</div>
+<div role="tabpanel" data-panel="xandhq" hidden aria-label="XandHQ case study" style="border-top: 1px dashed #E6E6E6; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr)); gap: 24px 64px; align-items: start; padding: clamp(32px, 3.5vw, 44px) clamp(20px, 4vw, 48px)">
+<div style="display: flex; flex-direction: column; gap: 20px">
+<span style="font-weight: 600; font-size: clamp(30px, 3vw, 42px); line-height: 1.05; letter-spacing: -0.04em; color: #FF4A1C">More deal flow in Q1</span>
+
+<div style="display: flex; align-items: center; gap: 12px">
+<span aria-hidden="true" style="flex: none; width: 40px; height: 40px; border-radius: 50%; background: #E7E7E7; display: flex; align-items: center; justify-content: center; font-weight: 600; font-size: 14px; color: #3A3A3A">DD</span>
+<div style="display: flex; flex-direction: column; line-height: 1.35">
+<a href="https://www.instagram.com/_ddc/" target="_blank" rel="noopener" class="om-navlink" style="font-weight: 600; font-size: 16px">Daniel Del Carmen</a>
+
+<a href="https://www.instagram.com/xandhq/" target="_blank" rel="noopener" class="om-ul" style="font-size: 14px; color: #4A4A4A">XandHQ</a>
+</div>
+</div>
+
+
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; padding-top: 4px"><span style="color: #6B6B6B; font-size: 15px">Want results like this?</span><a href="https://calendly.com/ayushsays68/30min" target="_blank" rel="noopener" class="om-accent" style="display: inline-flex; align-items: center; gap: 6px; height: 44px; padding: 0 18px 0 22px; border-radius: 999px; background-color: #DC3509; color: #FFFFFF; font-weight: 600; font-size: 15px; text-decoration: none; white-space: nowrap">Book a call<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></a></div>
+</div>
+<p style="margin: 0; max-width: 40em; color: #2B2B2B; font-size: clamp(17px, 1.35vw, 19px); line-height: 1.6; text-wrap: pretty">“Most agencies deliver edits. Orbit delivers a content engine. They handled scripting, editing, and multi-channel distribution for our firm’s content, and inbound deal flow noticeably picked up within the first quarter. Professional, responsive, zero hand-holding needed.”</p>
+
+</div>
+<div role="tabpanel" data-panel="elevator" hidden aria-label="Elevator Goods case study" style="border-top: 1px dashed #E6E6E6; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr)); gap: 24px 64px; align-items: start; padding: clamp(32px, 3.5vw, 44px) clamp(20px, 4vw, 48px)">
+<div style="display: flex; flex-direction: column; gap: 20px">
+<span style="font-weight: 600; font-size: clamp(30px, 3vw, 42px); line-height: 1.05; letter-spacing: -0.04em; color: #FF4A1C">10+ hours back a week</span>
+
+<div style="display: flex; align-items: center; gap: 12px">
+<span aria-hidden="true" style="flex: none; width: 40px; height: 40px; border-radius: 50%; background: #E7E7E7; display: flex; align-items: center; justify-content: center; font-weight: 600; font-size: 14px; color: #3A3A3A">M</span>
+<div style="display: flex; flex-direction: column; line-height: 1.35">
+<a href="https://www.instagram.com/msabnani93/" target="_blank" rel="noopener" class="om-navlink" style="font-weight: 600; font-size: 16px">Monish</a>
+
+<a href="https://www.instagram.com/elevatorgoods/" target="_blank" rel="noopener" class="om-ul" style="font-size: 14px; color: #4A4A4A">Elevator Goods</a>
+</div>
+</div>
+
+
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; padding-top: 4px"><span style="color: #6B6B6B; font-size: 15px">Want results like this?</span><a href="https://calendly.com/ayushsays68/30min" target="_blank" rel="noopener" class="om-accent" style="display: inline-flex; align-items: center; gap: 6px; height: 44px; padding: 0 18px 0 22px; border-radius: 999px; background-color: #DC3509; color: #FFFFFF; font-weight: 600; font-size: 15px; text-decoration: none; white-space: nowrap">Book a call<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></a></div>
+</div>
+<p style="margin: 0; max-width: 40em; color: #2B2B2B; font-size: clamp(17px, 1.35vw, 19px); line-height: 1.6; text-wrap: pretty">“Handed over my entire podcast post-production to Orbit and never looked back. Episodes go from raw recording to published clips across every platform without me touching anything. Listener numbers are up, and I’ve gotten back at least 10 hours a week.”</p>
+
+</div>
+<div role="tabpanel" data-panel="refly" hidden aria-label="Refly case study" style="border-top: 1px dashed #E6E6E6; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr)); gap: 24px 64px; align-items: start; padding: clamp(32px, 3.5vw, 44px) clamp(20px, 4vw, 48px)">
+<div style="display: flex; flex-direction: column; gap: 20px">
+<span style="font-weight: 600; font-size: clamp(30px, 3vw, 42px); line-height: 1.05; letter-spacing: -0.04em; color: #FF4A1C">Higher ROAS with AI video</span>
+
+
+<div style="display: flex; align-items: center; gap: 12px">
+<img src="assets/logos/refly.webp" alt="" width="40" height="40" style="flex: none; width: 40px; height: 40px; border-radius: 10px; object-fit: cover; box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08)">
+<div style="display: flex; flex-direction: column; line-height: 1.35"><span style="font-weight: 600; font-size: 16px">Refly</span><span style="font-size: 14px; color: #6B6B6B">Project summary</span></div>
+</div>
+
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; padding-top: 4px"><span style="color: #6B6B6B; font-size: 15px">Want results like this?</span><a href="https://calendly.com/ayushsays68/30min" target="_blank" rel="noopener" class="om-accent" style="display: inline-flex; align-items: center; gap: 6px; height: 44px; padding: 0 18px 0 22px; border-radius: 999px; background-color: #DC3509; color: #FFFFFF; font-weight: 600; font-size: 15px; text-decoration: none; white-space: nowrap">Book a call<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></a></div>
+</div>
+
+<p style="margin: 0; max-width: 40em; color: #2B2B2B; font-size: clamp(17px, 1.35vw, 19px); line-height: 1.6; text-wrap: pretty">We leveraged AI video to produce Refly’s ad creative at the speed and volume performance marketing needs. The result: a higher return on ad spend.</p>
+</div>
+<div role="tabpanel" data-panel="mainfold" hidden aria-label="Mainfold case study" style="border-top: 1px dashed #E6E6E6; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr)); gap: 24px 64px; align-items: start; padding: clamp(32px, 3.5vw, 44px) clamp(20px, 4vw, 48px)">
+<div style="display: flex; flex-direction: column; gap: 20px">
+<span style="font-weight: 600; font-size: clamp(30px, 3vw, 42px); line-height: 1.05; letter-spacing: -0.04em; color: #FF4A1C">Distribution that won clients</span>
+
+
+<div style="display: flex; align-items: center; gap: 12px">
+<img src="assets/logos/mainfold.webp" alt="" width="40" height="40" style="flex: none; width: 40px; height: 40px; border-radius: 10px; object-fit: cover; box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08)">
+<div style="display: flex; flex-direction: column; line-height: 1.35"><span style="font-weight: 600; font-size: 16px">Mainfold</span><span style="font-size: 14px; color: #6B6B6B">Project summary</span></div>
+</div>
+
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; padding-top: 4px"><span style="color: #6B6B6B; font-size: 15px">Want results like this?</span><a href="https://calendly.com/ayushsays68/30min" target="_blank" rel="noopener" class="om-accent" style="display: inline-flex; align-items: center; gap: 6px; height: 44px; padding: 0 18px 0 22px; border-radius: 999px; background-color: #DC3509; color: #FFFFFF; font-weight: 600; font-size: 15px; text-decoration: none; white-space: nowrap">Book a call<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></a></div>
+</div>
+
+<p style="margin: 0; max-width: 40em; color: #2B2B2B; font-size: clamp(17px, 1.35vw, 19px); line-height: 1.6; text-wrap: pretty">We handled distribution for Mainfold’s media, putting it in front of the right audiences, and that reach turned into new clients for the business.</p>
+</div>
+</section>
+
+<section id="work" style="scroll-margin-top: 96px; border-top: 1px dashed #E6E6E6">
+<div style="padding: clamp(64px, 7vw, 88px) clamp(20px, 4vw, 40px) 40px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 12px">
+<h2 style="margin: 0; font-weight: 600; font-size: clamp(32px, 3.6vw, 48px); line-height: 1.08; letter-spacing: -0.04em">Short-form that got seen</h2>
+<p style="margin: 0; max-width: 30em; color: #6B6B6B; font-size: 17px">Reels from the 1000+ videos we’ve produced and distributed.</p>
+</div>
+<div style="border-top: 1px dashed #E6E6E6; overflow: hidden; padding-bottom: 24px">
+<div class="om-reels-grid" style="display: grid; max-width: 1080px; margin: 0 auto; border-right: 1px dashed #E6E6E6">
+
+<div style="border-left: 1px dashed #E6E6E6; padding: 10px clamp(4px, 0.6vw, 10px)">
+<article class="om-tile" style="border-radius: 14px; padding: 12px; display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; align-items: flex-start; gap: 9px">
+<img src="assets/logos/orbit.webp" alt="" width="34" height="34" style="flex: none; width: 34px; height: 34px; border-radius: 50%; object-fit: cover; box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08)">
+<div style="flex: 1; min-width: 0; display: flex; flex-direction: column"><div style="display: flex; flex-wrap: wrap; align-items: center; gap: 0 6px"><span style="max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 600; font-size: 14px; letter-spacing: -0.01em">Orbit</span><span style="max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: #6B6B6B; font-size: 12px">Dec 26, 2025</span></div><a href="https://www.instagram.com/orbit.media.in/" target="_blank" rel="noopener" class="om-navlink" style="max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: #6B6B6B; font-size: 12px">@orbit.media.in</a></div>
+<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#9A9A9A" stroke-width="1.8" aria-hidden="true" style="flex: none; margin-top: 2px"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.3" cy="6.7" r="0.7" fill="#9A9A9A"></circle></svg>
+</div>
+<p style="margin: 0; min-height: 2.9em; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; color: #4A4A4A; font-size: 13.5px; line-height: 1.45">The best VCs don’t just invest. They broadcast.</p>
+<div style="position: relative; aspect-ratio: 9 / 16; border-radius: 12px; overflow: hidden; background-color: #111111; box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.06), 0 8px 20px rgba(0, 0, 0, 0.08)">
+<span style="position: absolute; top: 10px; left: 10px; z-index: 2; display: inline-flex; align-items: center; gap: 5px; padding: 4px 8px; border-radius: 7px; background: #FFFFFF; font-weight: 600; font-size: 13px"><svg width="12" height="12" viewBox="0 0 24 24" fill="#FF4A1C" aria-hidden="true"><rect x="3" y="11" width="4.5" height="10" rx="1.2"></rect><rect x="9.75" y="4" width="4.5" height="17" rx="1.2"></rect><rect x="16.5" y="8" width="4.5" height="13" rx="1.2"></rect></svg>166K</span>
+<video data-om-reel="vc" muted autoplay loop playsinline src="assets/video/orbit-vc-reel.mp4" poster="assets/video/orbit-vc-reel.jpg" preload="metadata" aria-label="Orbit reel: the best VCs don’t just invest, they broadcast" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover"></video>
+<button type="button" data-sound="vc" aria-label="Turn sound on" style="position: absolute; right: 8px; bottom: 8px; z-index: 2; width: 40px; height: 40px; border: 0; border-radius: 50%; background: rgba(0, 0, 0, 0.55); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); color: #FFFFFF; display: flex; align-items: center; justify-content: center; cursor: pointer"><span class="om-snd-off"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5L6 9H3v6h3l5 4z"></path><path d="M22 9l-6 6M16 9l6 6"></path></svg></span><span class="om-snd-on" hidden><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5L6 9H3v6h3l5 4z"></path><path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"></path></svg></span></button>
+</div>
+<div class="om-eng" style="display: grid; gap: 4px 2px; padding: 0 2px; color: #6B6B6B; font-size: 12px">
+<span style="display: flex; align-items: center; gap: 4px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" aria-label="Likes" role="img"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z"></path></svg>9,484</span>
+<span style="display: flex; align-items: center; gap: 4px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" aria-label="Comments" role="img"><path d="M21 11.5a8.5 8.5 0 0 1-12.4 7.6L3 21l1.9-5.6A8.5 8.5 0 1 1 21 11.5z"></path></svg>12+</span>
+</div>
+</article>
+</div>
+
+<div style="border-left: 1px dashed #E6E6E6; padding: 10px clamp(4px, 0.6vw, 10px)">
+<article class="om-tile" style="border-radius: 14px; padding: 12px; display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; align-items: flex-start; gap: 9px">
+<img src="assets/logos/ace-me.webp" alt="" width="34" height="34" style="flex: none; width: 34px; height: 34px; border-radius: 50%; object-fit: cover; box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08)">
+<div style="flex: 1; min-width: 0; display: flex; flex-direction: column"><div style="display: flex; flex-wrap: wrap; align-items: center; gap: 0 6px"><span style="max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 600; font-size: 14px; letter-spacing: -0.01em">Ace.me</span><span style="max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: #6B6B6B; font-size: 12px">Feb 18</span></div><a href="https://www.instagram.com/acedotme/" target="_blank" rel="noopener" class="om-navlink" style="max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: #6B6B6B; font-size: 12px">@acedotme</a></div>
+<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#9A9A9A" stroke-width="1.8" aria-hidden="true" style="flex: none; margin-top: 2px"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.3" cy="6.7" r="0.7" fill="#9A9A9A"></circle></svg>
+</div>
+<p style="margin: 0; min-height: 2.9em; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; color: #4A4A4A; font-size: 13.5px; line-height: 1.45">How to create websites with ace.me in 5 simple steps</p>
+<div style="position: relative; aspect-ratio: 9 / 16; border-radius: 12px; overflow: hidden; background-color: #111111; box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.06), 0 8px 20px rgba(0, 0, 0, 0.08)">
+<span style="position: absolute; top: 10px; left: 10px; z-index: 2; display: inline-flex; align-items: center; gap: 5px; padding: 4px 8px; border-radius: 7px; background: #FFFFFF; font-weight: 600; font-size: 13px"><svg width="12" height="12" viewBox="0 0 24 24" fill="#FF4A1C" aria-hidden="true"><rect x="3" y="11" width="4.5" height="10" rx="1.2"></rect><rect x="9.75" y="4" width="4.5" height="17" rx="1.2"></rect><rect x="16.5" y="8" width="4.5" height="13" rx="1.2"></rect></svg>115K</span>
+<video data-om-reel="ace" muted autoplay loop playsinline src="assets/video/ace-me-reel.mp4" poster="assets/video/ace-me-reel.jpg" preload="metadata" aria-label="Ace.me reel: how to create websites with ace.me in 5 simple steps" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover"></video>
+<button type="button" data-sound="ace" aria-label="Turn sound on" style="position: absolute; right: 8px; bottom: 8px; z-index: 2; width: 40px; height: 40px; border: 0; border-radius: 50%; background: rgba(0, 0, 0, 0.55); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); color: #FFFFFF; display: flex; align-items: center; justify-content: center; cursor: pointer"><span class="om-snd-off"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5L6 9H3v6h3l5 4z"></path><path d="M22 9l-6 6M16 9l6 6"></path></svg></span><span class="om-snd-on" hidden><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5L6 9H3v6h3l5 4z"></path><path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"></path></svg></span></button>
+</div>
+<div class="om-eng" style="display: grid; gap: 4px 2px; padding: 0 2px; color: #6B6B6B; font-size: 12px">
+<span style="display: flex; align-items: center; gap: 4px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" aria-label="Likes" role="img"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z"></path></svg>3,281</span>
+<span style="display: flex; align-items: center; gap: 4px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" aria-label="Comments" role="img"><path d="M21 11.5a8.5 8.5 0 0 1-12.4 7.6L3 21l1.9-5.6A8.5 8.5 0 1 1 21 11.5z"></path></svg>13+</span>
+</div>
+</article>
+</div>
+
+<div style="border-left: 1px dashed #E6E6E6; padding: 10px clamp(4px, 0.6vw, 10px)">
+<article class="om-tile" style="border-radius: 14px; padding: 12px; display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; align-items: flex-start; gap: 9px">
+<span aria-hidden="true" style="flex: none; width: 34px; height: 34px; border-radius: 50%; background: #E7E7E7; display: flex; align-items: center; justify-content: center; font-weight: 600; font-size: 12px; color: #3A3A3A">EG</span>
+<div style="flex: 1; min-width: 0; display: flex; flex-direction: column"><div style="display: flex; flex-wrap: wrap; align-items: center; gap: 0 6px"><span style="max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 600; font-size: 14px; letter-spacing: -0.01em">Elevator Goods</span><span style="max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: #6B6B6B; font-size: 12px">Apr 6</span></div><a href="https://www.instagram.com/elevatorgoods/" target="_blank" rel="noopener" class="om-navlink" style="max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: #6B6B6B; font-size: 12px">@elevatorgoods</a></div>
+<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#9A9A9A" stroke-width="1.8" aria-hidden="true" style="flex: none; margin-top: 2px"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.3" cy="6.7" r="0.7" fill="#9A9A9A"></circle></svg>
+</div>
+<p style="margin: 0; min-height: 2.9em; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; color: #4A4A4A; font-size: 13.5px; line-height: 1.45">Comment “NOTORIOUS” and we’ll DM you the full episode with @notorious_foodie</p>
+<div style="position: relative; aspect-ratio: 9 / 16; border-radius: 12px; overflow: hidden; background-color: #111111; box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.06), 0 8px 20px rgba(0, 0, 0, 0.08)">
+<span style="position: absolute; top: 10px; left: 10px; z-index: 2; display: inline-flex; align-items: center; gap: 5px; padding: 4px 8px; border-radius: 7px; background: #FFFFFF; font-weight: 600; font-size: 13px"><svg width="12" height="12" viewBox="0 0 24 24" fill="#FF4A1C" aria-hidden="true"><rect x="3" y="11" width="4.5" height="10" rx="1.2"></rect><rect x="9.75" y="4" width="4.5" height="17" rx="1.2"></rect><rect x="16.5" y="8" width="4.5" height="13" rx="1.2"></rect></svg>162K</span>
+<video data-om-reel="eg" muted autoplay loop playsinline src="assets/video/elevator-goods-reel.mp4" poster="assets/video/elevator-goods-reel.jpg" preload="metadata" aria-label="Elevator Goods podcast clip with Notorious Foodie" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover"></video>
+<button type="button" data-sound="eg" aria-label="Turn sound on" style="position: absolute; right: 8px; bottom: 8px; z-index: 2; width: 40px; height: 40px; border: 0; border-radius: 50%; background: rgba(0, 0, 0, 0.55); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); color: #FFFFFF; display: flex; align-items: center; justify-content: center; cursor: pointer"><span class="om-snd-off"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5L6 9H3v6h3l5 4z"></path><path d="M22 9l-6 6M16 9l6 6"></path></svg></span><span class="om-snd-on" hidden><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5L6 9H3v6h3l5 4z"></path><path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"></path></svg></span></button>
+</div>
+<div class="om-eng" style="display: grid; gap: 4px 2px; padding: 0 2px; color: #6B6B6B; font-size: 12px">
+<span style="display: flex; align-items: center; gap: 4px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" aria-label="Likes" role="img"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z"></path></svg>2,891</span>
+<span style="display: flex; align-items: center; gap: 4px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" aria-label="Comments" role="img"><path d="M21 11.5a8.5 8.5 0 0 1-12.4 7.6L3 21l1.9-5.6A8.5 8.5 0 1 1 21 11.5z"></path></svg>12+</span>
+</div>
+</article>
+</div>
+
+
+</div>
+</div>
+</section>
+
+<section id="long-form" aria-label="Podcasts and launch videos" style="scroll-margin-top: 96px; border-top: 1px dashed #E6E6E6">
+<div style="padding: clamp(56px, 6vw, 80px) clamp(20px, 4vw, 40px) 36px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 12px">
+<h2 style="margin: 0; font-weight: 600; font-size: clamp(32px, 3.6vw, 48px); line-height: 1.08; letter-spacing: -0.04em">Podcasts &amp; launch videos</h2>
+<p style="margin: 0; max-width: 30em; color: #6B6B6B; font-size: 17px">Full episodes and launch films in 16:9, produced and distributed.</p>
+</div>
+<div style="border-top: 1px dashed #E6E6E6; overflow: hidden; padding-bottom: 24px">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(440px, 100%), 1fr)); margin-left: -1px">
+<div style="border-left: 1px dashed #E6E6E6; padding: 12px clamp(8px, 1.4vw, 20px)">
+<article class="om-tile" style="height: 100%; box-sizing: border-box; border-radius: 16px; padding: 20px; display: flex; flex-direction: column; gap: 16px">
+<div style="display: flex; align-items: flex-start; gap: 12px">
+<img src="assets/logos/the-peel.webp" alt="" width="48" height="48" style="flex: none; width: 48px; height: 48px; border-radius: 50%; object-fit: cover; box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08)">
+<div style="flex: 1; min-width: 0; display: flex; flex-direction: column; line-height: 1.4">
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 0 8px"><span style="font-weight: 600; font-size: 17px; letter-spacing: -0.01em">The Peel</span><span style="color: #6B6B6B; font-size: 14px">1w</span></div>
+<a href="https://www.instagram.com/thepeelpod/" target="_blank" rel="noopener" class="om-navlink" style="align-self: flex-start; color: #6B6B6B; font-size: 14px">@thepeelpod</a>
+<span style="color: #6B6B6B; font-size: 13px">Turner Novak, VC and investor</span>
+</div>
+<div style="flex: none; display: flex; align-items: center; gap: 10px"><span style="padding: 5px 11px; border-radius: 999px; background: #FFF1EB; color: #DC3509; font-weight: 600; font-size: 13px; white-space: nowrap">Podcast</span><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#9A9A9A" stroke-width="1.8" aria-hidden="true" style="flex: none"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.3" cy="6.7" r="0.7" fill="#9A9A9A"></circle></svg></div>
+</div>
+<p style="margin: 0; min-height: 3em; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; color: #4A4A4A; font-size: 16px; line-height: 1.5">Physical AI is a $16 trillion opportunity, and most founders are ignoring it.</p>
+<div style="position: relative; aspect-ratio: 16 / 9; border-radius: 14px; overflow: hidden; background-color: #111111; box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.06), 0 8px 20px rgba(0, 0, 0, 0.08)">
+<video data-om-reel="peel" muted autoplay loop playsinline src="assets/video/the-peel-podcast.mp4" poster="assets/video/the-peel-podcast.jpg" preload="metadata" aria-label="The Peel podcast trailer on physical AI" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover"></video>
+<button type="button" data-sound="peel" aria-label="Turn sound on" style="position: absolute; right: 10px; bottom: 10px; z-index: 2; width: 42px; height: 42px; border: 0; border-radius: 50%; background: rgba(0, 0, 0, 0.55); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); color: #FFFFFF; display: flex; align-items: center; justify-content: center; cursor: pointer"><span class="om-snd-off"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5L6 9H3v6h3l5 4z"></path><path d="M22 9l-6 6M16 9l6 6"></path></svg></span><span class="om-snd-on" hidden><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5L6 9H3v6h3l5 4z"></path><path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"></path></svg></span></button>
+</div>
+</article>
+</div>
+<div style="border-left: 1px dashed #E6E6E6; padding: 12px clamp(8px, 1.4vw, 20px)">
+<article class="om-tile" style="height: 100%; box-sizing: border-box; border-radius: 16px; padding: 20px; display: flex; flex-direction: column; gap: 16px">
+<div style="display: flex; align-items: flex-start; gap: 12px">
+<span aria-hidden="true" style="flex: none; width: 48px; height: 48px; border-radius: 50%; background: #0A0A0A; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 15px; letter-spacing: -0.02em; color: #FFFFFF">MT</span>
+<div style="flex: 1; min-width: 0; display: flex; flex-direction: column; line-height: 1.4">
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 0 8px"><span style="font-weight: 600; font-size: 17px; letter-spacing: -0.01em">MediaTech</span><span style="color: #6B6B6B; font-size: 14px">Sep 20</span></div>
+<a href="https://www.instagram.com/mediatech.gtm/" target="_blank" rel="noopener" class="om-navlink" style="align-self: flex-start; color: #6B6B6B; font-size: 14px">@mediatech.gtm</a>
+<span style="color: #6B6B6B; font-size: 13px">Launch film, made with Orbit</span>
+</div>
+<div style="flex: none; display: flex; align-items: center; gap: 10px"><span style="padding: 5px 11px; border-radius: 999px; background: #FFF1EB; color: #DC3509; font-weight: 600; font-size: 13px; white-space: nowrap">Launch video</span><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#9A9A9A" stroke-width="1.8" aria-hidden="true" style="flex: none"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.3" cy="6.7" r="0.7" fill="#9A9A9A"></circle></svg></div>
+</div>
+<p style="margin: 0; min-height: 3em; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; color: #4A4A4A; font-size: 16px; line-height: 1.5">Winning gets attention. Attention creates opportunities.</p>
+<div style="position: relative; aspect-ratio: 16 / 9; border-radius: 14px; overflow: hidden; background-color: #111111; box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.06), 0 8px 20px rgba(0, 0, 0, 0.08)">
+<video data-om-reel="mt" muted autoplay loop playsinline src="assets/video/mediatech-launch.mp4" poster="assets/video/mediatech-launch.jpg" preload="metadata" aria-label="MediaTech launch video: winning gets attention" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover"></video>
+<button type="button" data-sound="mt" aria-label="Turn sound on" style="position: absolute; right: 10px; bottom: 10px; z-index: 2; width: 42px; height: 42px; border: 0; border-radius: 50%; background: rgba(0, 0, 0, 0.55); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); color: #FFFFFF; display: flex; align-items: center; justify-content: center; cursor: pointer"><span class="om-snd-off"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5L6 9H3v6h3l5 4z"></path><path d="M22 9l-6 6M16 9l6 6"></path></svg></span><span class="om-snd-on" hidden><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5L6 9H3v6h3l5 4z"></path><path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"></path></svg></span></button>
+</div>
+</article>
+</div>
+</div>
+</div>
+<div style="border-top: 1px dashed #E6E6E6; padding: 32px clamp(20px, 4vw, 40px); display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 12px 20px"><span style="font-weight: 600; font-size: clamp(18px, 1.6vw, 22px); letter-spacing: -0.02em">Want content that gets seen like this?</span><a href="https://calendly.com/ayushsays68/30min" target="_blank" rel="noopener" class="om-accent" style="display: inline-flex; align-items: center; gap: 6px; height: 48px; padding: 0 18px 0 22px; border-radius: 999px; background-color: #DC3509; color: #FFFFFF; font-weight: 600; font-size: 16px; text-decoration: none; white-space: nowrap">Book a call<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></a></div>
+</section>
+
+<section id="services" style="scroll-margin-top: 96px; border-top: 1px dashed #E6E6E6">
+<div style="padding: clamp(56px, 6vw, 80px) clamp(20px, 3vw, 40px) clamp(28px, 3vw, 44px); display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 20px 40px">
+<div style="display: flex; flex-direction: column; gap: 10px">
+<h2 style="margin: 0; font-weight: 600; font-size: clamp(34px, 3.6vw, 48px); line-height: 1.05; letter-spacing: -0.04em">What we do</h2>
+<p style="margin: 0; color: #6B6B6B; font-size: 18px">Three formats, one engine. Produced and distributed, not just delivered.</p>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 10px"><a href="#case-studies" class="om-light" style="display: inline-flex; align-items: center; gap: 8px; height: 44px; padding: 0 14px 0 18px; border-radius: 999px; background-color: #FFFFFF; box-shadow: 0 0 0 1px #E3E3E3; font-weight: 500; font-size: 15px; text-decoration: none">See case studies<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></a><a href="https://calendly.com/ayushsays68/30min" target="_blank" rel="noopener" class="om-accent" style="display: inline-flex; align-items: center; gap: 6px; height: 44px; padding: 0 18px 0 22px; border-radius: 999px; background-color: #DC3509; color: #FFFFFF; font-weight: 600; font-size: 15px; text-decoration: none; white-space: nowrap">Book a call<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></a></div>
+</div>
+<div style="overflow: hidden; padding-bottom: clamp(24px, 3vw, 40px)">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(340px, 100%), 1fr)); margin-left: -1px">
+<div style="border-left: 1px dashed #E6E6E6; padding: 8px clamp(8px, 1.4vw, 20px)">
+<article class="om-tile" style="height: 100%; box-sizing: border-box; border-radius: 16px; padding: 20px; display: flex; flex-direction: column; gap: 16px">
+<div style="display: flex; align-items: flex-start; gap: 12px">
+<span aria-hidden="true" style="flex: none; width: 44px; height: 44px; border-radius: 50%; background: #FF4A1C; color: #FFFFFF; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none"><rect x="9" y="3" width="6" height="11" rx="3"></rect><path d="M5 11a7 7 0 0 0 14 0M12 18v3"></path></svg></span>
+<div style="flex: 1; min-width: 0; display: flex; flex-direction: column">
+<h3 style="margin: 0; font-weight: 600; font-size: 18px; line-height: 1.35; letter-spacing: -0.02em">Podcasting</h3>
+<span style="color: #6B6B6B; font-size: 15px">End-to-end production</span>
+</div>
+<span role="img" aria-label="Distributed on Instagram and LinkedIn" style="flex: none; display: flex; gap: 10px; margin-top: 4px; color: #A3A3A3"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><path d="M17.3 6.7h.01"></path></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none"><rect x="3" y="3" width="18" height="18" rx="3"></rect><path d="M8 10.5V16M8 7.6v.01M11.5 16v-5.5M11.5 13a2.5 2.5 0 0 1 5 0v3"></path></svg></span>
+</div>
+<p style="margin: 0; min-height: 4.65em; padding-left: 56px; color: #4A4A4A; font-size: 16px; line-height: 1.55; text-wrap: pretty">We do end-to-end podcasting: concept, guest research, recording, editing and distribution. Orbit is behind some of the most binge-worthy shows in tech and venture.</p>
+<div style="position: relative; aspect-ratio: 16 / 9; border-radius: 14px; overflow: hidden; background-color: #1A1A1A; box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.06), 0 8px 20px rgba(0, 0, 0, 0.08)"><img class="om-thumb-img" src="assets/thumb-podcasting.webp" alt="A two-person podcast being filmed on an outdoor desert set" width="1120" height="630" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 55%"><span aria-hidden="true" style="position: absolute; inset: 0; z-index: 1; background: linear-gradient(180deg, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0.42) 100%)"></span><span style="position: absolute; top: 12px; left: 12px; z-index: 2; display: inline-flex; align-items: center; gap: 6px; padding: 5px 10px; border-radius: 8px; background: #FFFFFF; color: #0A0A0A; font-weight: 600; font-size: 14px; box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.06), 0 2px 8px rgba(0, 0, 0, 0.12)"><span class="om-pulse" style="width: 8px; height: 8px; border-radius: 50%; background: #FF4A1C"></span>REC</span><span style="position: absolute; left: 50%; bottom: 12px; z-index: 2; transform: translateX(-50%); padding: 2px 7px; border-radius: 3px; background: rgba(0, 0, 0, 0.62); color: #FFFFFF; font-size: 12px; line-height: 1.5; white-space: nowrap">the conversation everyone clips</span></div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(92px, 1fr)); gap: 8px 6px; padding: 0 4px; color: #6B6B6B; font-size: 13px"><span style="display: flex; align-items: center; gap: 6px; min-width: 0; white-space: nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none"><path d="M9 18h6M10 21h4"></path><path d="M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z"></path></svg>Concept</span><span style="display: flex; align-items: center; gap: 6px; min-width: 0; white-space: nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none"><circle cx="9" cy="8" r="3.5"></circle><path d="M2.5 20c.8-3.5 3.4-5.5 6.5-5.5s5.7 2 6.5 5.5"></path><path d="M16 4.5a3.5 3.5 0 0 1 0 7M18.5 14.8c1.6.8 2.6 2.6 3 5.2"></path></svg>Guests</span><span style="display: flex; align-items: center; gap: 6px; min-width: 0; white-space: nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none"><rect x="9" y="3" width="6" height="11" rx="3"></rect><path d="M5 11a7 7 0 0 0 14 0M12 18v3"></path></svg>Recording</span><span style="display: flex; align-items: center; gap: 6px; min-width: 0; white-space: nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none"><path d="M21 3L10 14"></path><path d="M21 3l-7 18-4-7-7-4z"></path></svg>Distribution</span></div>
+<a href="https://calendly.com/ayushsays68/30min" target="_blank" rel="noopener" class="om-cta-link" style="align-self: flex-start; display: inline-flex; align-items: center; gap: 4px; min-height: 40px; margin-top: auto; padding: 0 4px; color: #DC3509; font-weight: 600; font-size: 14px; text-decoration: none">Book a podcasting call<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></a>
+</article>
+</div>
+<div style="border-left: 1px dashed #E6E6E6; padding: 8px clamp(8px, 1.4vw, 20px)">
+<article class="om-tile" style="height: 100%; box-sizing: border-box; border-radius: 16px; padding: 20px; display: flex; flex-direction: column; gap: 16px">
+<div style="display: flex; align-items: flex-start; gap: 12px">
+<span aria-hidden="true" style="flex: none; width: 44px; height: 44px; border-radius: 50%; background: #FF4A1C; color: #FFFFFF; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"></path></svg></span>
+<div style="flex: 1; min-width: 0; display: flex; flex-direction: column">
+<h3 style="margin: 0; font-weight: 600; font-size: 18px; line-height: 1.35; letter-spacing: -0.02em">Founder’s Brand</h3>
+<span style="color: #6B6B6B; font-size: 15px">Personal brands for founders</span>
+</div>
+<span role="img" aria-label="Distributed on Instagram and LinkedIn" style="flex: none; display: flex; gap: 10px; margin-top: 4px; color: #A3A3A3"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><path d="M17.3 6.7h.01"></path></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none"><rect x="3" y="3" width="18" height="18" rx="3"></rect><path d="M8 10.5V16M8 7.6v.01M11.5 16v-5.5M11.5 13a2.5 2.5 0 0 1 5 0v3"></path></svg></span>
+</div>
+<p style="margin: 0; min-height: 4.65em; padding-left: 56px; color: #4A4A4A; font-size: 16px; line-height: 1.55; text-wrap: pretty">We turn founders into the most recognisable voice in their category through short-form content, founder-led storytelling and the systems behind both.</p>
+<div style="position: relative; aspect-ratio: 16 / 9; border-radius: 14px; overflow: hidden; background-color: #1A1A1A; box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.06), 0 8px 20px rgba(0, 0, 0, 0.08)"><img class="om-thumb-img" src="assets/thumb-founders-brand.webp" alt="A group of founders and executives in a lounge" width="1120" height="630" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 35%"><span aria-hidden="true" style="position: absolute; inset: 0; z-index: 1; background: linear-gradient(180deg, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0.42) 100%)"></span><span style="position: absolute; top: 12px; left: 12px; z-index: 2; display: inline-flex; align-items: center; gap: 6px; padding: 5px 10px; border-radius: 8px; background: #FFFFFF; color: #0A0A0A; font-weight: 600; font-size: 14px; box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.06), 0 2px 8px rgba(0, 0, 0, 0.12)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FF4A1C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"></path></svg>Founder-led</span><span style="position: absolute; left: 50%; bottom: 12px; z-index: 2; transform: translateX(-50%); padding: 2px 7px; border-radius: 3px; background: rgba(0, 0, 0, 0.62); color: #FFFFFF; font-size: 12px; line-height: 1.5; white-space: nowrap">your voice, everywhere it matters</span></div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(92px, 1fr)); gap: 8px 6px; padding: 0 4px; color: #6B6B6B; font-size: 13px"><span style="display: flex; align-items: center; gap: 6px; min-width: 0; white-space: nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none"><rect x="7" y="2.5" width="10" height="19" rx="2.5"></rect><path d="M10.5 9.5v5l4-2.5z"></path></svg>Short-form</span><span style="display: flex; align-items: center; gap: 6px; min-width: 0; white-space: nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none"><path d="M4 6h16M4 12h11M4 18h7"></path></svg>Storytelling</span><span style="display: flex; align-items: center; gap: 6px; min-width: 0; white-space: nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none"><rect x="3" y="3" width="7.5" height="7.5" rx="1.5"></rect><rect x="13.5" y="3" width="7.5" height="7.5" rx="1.5"></rect><rect x="3" y="13.5" width="7.5" height="7.5" rx="1.5"></rect><rect x="13.5" y="13.5" width="7.5" height="7.5" rx="1.5"></rect></svg>Systems</span><span style="display: flex; align-items: center; gap: 6px; min-width: 0; white-space: nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none"><path d="M21 3L10 14"></path><path d="M21 3l-7 18-4-7-7-4z"></path></svg>Distribution</span></div>
+<a href="https://calendly.com/ayushsays68/30min" target="_blank" rel="noopener" class="om-cta-link" style="align-self: flex-start; display: inline-flex; align-items: center; gap: 4px; min-height: 40px; margin-top: auto; padding: 0 4px; color: #DC3509; font-weight: 600; font-size: 14px; text-decoration: none">Book a founder brand call<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></a>
+</article>
+</div>
+<div style="border-left: 1px dashed #E6E6E6; padding: 8px clamp(8px, 1.4vw, 20px)">
+<article class="om-tile" style="height: 100%; box-sizing: border-box; border-radius: 16px; padding: 20px; display: flex; flex-direction: column; gap: 16px">
+<div style="display: flex; align-items: flex-start; gap: 12px">
+<span aria-hidden="true" style="flex: none; width: 44px; height: 44px; border-radius: 50%; background: #FF4A1C; color: #FFFFFF; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none"><path d="M12 2.5c3 2.2 4.5 5.8 4.5 9.5l-1.8 3h-5.4l-1.8-3c0-3.7 1.5-7.3 4.5-9.5z"></path><circle cx="12" cy="9" r="1.6"></circle><path d="M9.5 15l-1.5 4 2.5-1M14.5 15l1.5 4-2.5-1"></path></svg></span>
+<div style="flex: 1; min-width: 0; display: flex; flex-direction: column">
+<h3 style="margin: 0; font-weight: 600; font-size: 18px; line-height: 1.35; letter-spacing: -0.02em">Launch Video</h3>
+<span style="color: #6B6B6B; font-size: 15px">Launches and funding news</span>
+</div>
+<span role="img" aria-label="Distributed on Instagram and LinkedIn" style="flex: none; display: flex; gap: 10px; margin-top: 4px; color: #A3A3A3"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><path d="M17.3 6.7h.01"></path></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none"><rect x="3" y="3" width="18" height="18" rx="3"></rect><path d="M8 10.5V16M8 7.6v.01M11.5 16v-5.5M11.5 13a2.5 2.5 0 0 1 5 0v3"></path></svg></span>
+</div>
+<p style="margin: 0; min-height: 4.65em; padding-left: 56px; color: #4A4A4A; font-size: 16px; line-height: 1.55; text-wrap: pretty">Product launches and funding announcements, produced to travel. We turn your biggest moments into content that’s guaranteed to get seen.</p>
+<div class="om-launch-thumb" role="img" aria-label="A rocket lifting off at sunset" style="position: relative; aspect-ratio: 16 / 9; border-radius: 14px; overflow: hidden; background-color: #B9C1CF; box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.06), 0 8px 20px rgba(0, 0, 0, 0.08); display: flex; align-items: center; justify-content: center"><span style="position: absolute; top: 12px; left: 12px; z-index: 2; display: inline-flex; align-items: center; gap: 6px; padding: 5px 10px; border-radius: 8px; background: #FFFFFF; color: #0A0A0A; font-weight: 600; font-size: 14px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FF4A1C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none"><path d="M12 2.5c3 2.2 4.5 5.8 4.5 9.5l-1.8 3h-5.4l-1.8-3c0-3.7 1.5-7.3 4.5-9.5z"></path><circle cx="12" cy="9" r="1.6"></circle><path d="M9.5 15l-1.5 4 2.5-1M14.5 15l1.5 4-2.5-1"></path></svg>Launch day</span><span aria-hidden="true" style="position: absolute; inset: 0; z-index: 1; background: linear-gradient(180deg, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0.42) 100%)"></span><span style="position: absolute; left: 50%; bottom: 12px; z-index: 2; transform: translateX(-50%); padding: 2px 7px; border-radius: 3px; background: rgba(0, 0, 0, 0.62); color: #FFFFFF; font-size: 12px; line-height: 1.5; white-space: nowrap">launch day, done right</span></div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(92px, 1fr)); gap: 8px 6px; padding: 0 4px; color: #6B6B6B; font-size: 13px"><span style="display: flex; align-items: center; gap: 6px; min-width: 0; white-space: nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none"><path d="M12 2.5c3 2.2 4.5 5.8 4.5 9.5l-1.8 3h-5.4l-1.8-3c0-3.7 1.5-7.3 4.5-9.5z"></path><circle cx="12" cy="9" r="1.6"></circle><path d="M9.5 15l-1.5 4 2.5-1M14.5 15l1.5 4-2.5-1"></path></svg>Launches</span><span style="display: flex; align-items: center; gap: 6px; min-width: 0; white-space: nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none"><path d="M3 17l6-6 4 4 8-8"></path><path d="M15 7h6v6"></path></svg>Funding news</span><span style="display: flex; align-items: center; gap: 6px; min-width: 0; white-space: nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none"><rect x="2.5" y="6" width="13" height="12" rx="2.5"></rect><path d="M15.5 10.5l6-3.5v10l-6-3.5z"></path></svg>Production</span><span style="display: flex; align-items: center; gap: 6px; min-width: 0; white-space: nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none"><path d="M21 3L10 14"></path><path d="M21 3l-7 18-4-7-7-4z"></path></svg>Distribution</span></div>
+<a href="https://calendly.com/ayushsays68/30min" target="_blank" rel="noopener" class="om-cta-link" style="align-self: flex-start; display: inline-flex; align-items: center; gap: 4px; min-height: 40px; margin-top: auto; padding: 0 4px; color: #DC3509; font-weight: 600; font-size: 14px; text-decoration: none">Book a launch video call<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></a>
+</article>
+</div>
+</div>
+</div>
+</section>
+
+<section id="contact" style="scroll-margin-top: 96px; border-top: 1px dashed #E6E6E6; padding: clamp(96px, 11vw, 152px) clamp(20px, 4vw, 40px); display: flex; flex-direction: column; align-items: center; text-align: center; gap: 22px">
+<h2 style="margin: 0; max-width: 12em; font-weight: 600; font-size: clamp(38px, 5vw, 72px); line-height: 1.02; letter-spacing: -0.045em; text-wrap: balance">Let’s get your next launch seen.</h2>
+<p style="margin: 0; max-width: 32em; color: #6B6B6B; font-size: clamp(17px, 1.5vw, 19px); text-wrap: pretty">Tell us what you’re shipping: a launch, a raise, a show, a founder story. We’ll produce it and get it in front of the right people.</p>
+<div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 12px 20px; padding-top: 6px">
+<a href="https://calendly.com/ayushsays68/30min" target="_blank" rel="noopener" class="om-accent" style="display: inline-flex; align-items: center; gap: 6px; height: 48px; padding: 0 18px 0 22px; border-radius: 999px; background-color: #DC3509; color: #FFFFFF; font-weight: 600; font-size: 16px; text-decoration: none">Book a call<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></a>
+<span style="color: #6B6B6B; font-size: 15px">A 30-minute call. Pick any time that works for you.</span>
+</div>
+</section>
+
+<footer style="border-top: 1px dashed #E6E6E6; padding: 36px clamp(20px, 4vw, 40px) 40px; display: flex; flex-direction: column; gap: 28px">
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px 40px">
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px 20px">
+<a href="#top" style="display: flex; align-items: center; min-height: 44px; text-decoration: none; font-weight: 700; font-size: 20px; letter-spacing: -0.03em; color: #FF4A1C">Orbit</a>
+<span style="color: #6B6B6B; font-size: 15px">The media engine for founders, startups &amp; venture-backed brands.</span>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 0 26px; font-size: 15px; font-weight: 500">
+<a href="#case-studies" class="om-navlink" style="display: flex; align-items: center; min-height: 44px">Case Studies</a>
+<a href="#work" class="om-navlink" style="display: flex; align-items: center; min-height: 44px">Work</a>
+<a href="#services" class="om-navlink" style="display: flex; align-items: center; min-height: 44px">Services</a>
+<a href="#contact" class="om-navlink" style="display: flex; align-items: center; min-height: 44px">Contact</a>
+<a href="https://calendly.com/ayushsays68/30min" target="_blank" rel="noopener" class="om-navlink" style="display: flex; align-items: center; min-height: 44px; color: #DC3509; font-weight: 600">Book a call</a>
+</div>
+</div>
+<div style="padding-top: 22px; border-top: 1px dashed #E6E6E6; font-size: 14px; color: #6B6B6B">© 2026 Orbit</div>
+</footer>
+
+</div>
+</div>
+<script>
+(function () {
+  // sticky pill nav after the opening screen
+  var sticky = document.getElementById('om-sticky');
+  function onScroll() {
+    var show = (window.scrollY || document.documentElement.scrollTop || 0) > 700;
+    if (sticky.hidden === show) { sticky.hidden = !show; }
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  // case studies: click a box to open its story
+  function selectCase(id) {
+    document.querySelectorAll('[data-variant]').forEach(function (b) {
+      var mine = b.getAttribute('data-case') === id;
+      b.hidden = b.getAttribute('data-variant') === 'active' ? !mine : mine;
+    });
+    document.querySelectorAll('[data-panel]').forEach(function (p) {
+      p.hidden = p.getAttribute('data-panel') !== id;
+    });
+  }
+  document.querySelectorAll('button[data-case]').forEach(function (b) {
+    b.addEventListener('click', function () { selectCase(b.getAttribute('data-case')); });
+  });
+
+  // videos: muted autoplay loops, only play while on screen, one with sound at a time
+  var videos = [].slice.call(document.querySelectorAll('video[data-om-reel]'));
+  function tryPlay(v) { var p = v.play(); if (p && p.catch) { p.catch(function () {}); } }
+  videos.forEach(function (v) { v.muted = true; });
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) { if (en.isIntersecting) { tryPlay(en.target); } else { en.target.pause(); } });
+    }, { threshold: 0.25 });
+    videos.forEach(function (v) { io.observe(v); });
+  } else {
+    videos.forEach(tryPlay);
+  }
+  var buttons = [].slice.call(document.querySelectorAll('button[data-sound]'));
+  function paint(activeId) {
+    buttons.forEach(function (b) {
+      var on = b.getAttribute('data-sound') === activeId;
+      b.setAttribute('aria-label', on ? 'Mute video' : 'Turn sound on');
+      b.querySelector('.om-snd-on').hidden = !on;
+      b.querySelector('.om-snd-off').hidden = on;
+    });
+  }
+  var soundId = null;
+  buttons.forEach(function (b) {
+    b.addEventListener('click', function () {
+      var id = b.getAttribute('data-sound');
+      soundId = soundId === id ? null : id;
+      videos.forEach(function (v) {
+        var on = v.getAttribute('data-om-reel') === soundId;
+        v.muted = !on;
+        if (on) { tryPlay(v); }
+      });
+      paint(soundId);
+    });
+  });
+})();
+</script>
+</body>
+</html>
